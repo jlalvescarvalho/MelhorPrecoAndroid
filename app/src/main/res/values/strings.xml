@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MelhorPreco</string>
+    <string name="Titulo_main">Melhor Preço</string>
+    <string name="title_activity_inicio__carrinho">Inicio_Carrinho</string>
+    <string name="title_activity_inicio">Inicio</string>
+    <string name="Opcao_um">Cadastrar Produto</string>
+    <string name="Opcao_dois">Selecionar Produtos</string>
+    <string name="Opcao_tres">Realizar Pesquisa</string>
+    <string name="Produto">Produto: </string>
+    <string name="Preco">Preço:   R$  </string>
+    <string name="Quantidade">Quantidade: </string>
+    <string name="BtSalvar">Adicionar </string>
+    <string name="BtCancel">Cancelar </string>
+</resources>
