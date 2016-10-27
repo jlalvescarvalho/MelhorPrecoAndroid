@@ -11,4 +11,15 @@
     <string name="Quantidade">Quantidade: </string>
     <string name="BtSalvar">Adicionar </string>
     <string name="BtCancel">Cancelar </string>
+    <string name="Codigo_bar_Prod">Código de Barras </string>
+    <string name="Descrição_Prod">Descrição </string>
+    <string name="BtCadastrar_Prod">Cadastrar </string>
+    <string name="BtAlterar_Prod">Alterar </string>
+    <string name="BtExcluir_Prod">Excluir </string>
+    <string name="Titulo_Compare">Compare </string>
+    <string name="produto_ProdutoMercado">Produto: </string>
+    <string name="mercado_ProdutoMercado">Mercado: </string>
+    <string name="preco_ProdutoMercado">Preço: </string>
+    <string name="BtSalvar_ProdutoMercado">Salvar </string>
+    <string name="BtCancel_ProdutoMercado">Cancelar </string>
 </resources>

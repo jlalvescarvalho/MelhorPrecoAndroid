@@ -20,7 +20,7 @@
             android:layout_width="140dp"
             android:layout_height="match_parent"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Mercado:"
+            android:text="@string/mercado_ProdutoMercado"
             android:id="@+id/txtMercado"
             android:textSize="30dp" />
 
@@ -42,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Produto:"
+            android:text="@string/produto_ProdutoMercado"
             android:id="@+id/txtProduto"
             android:textSize="30dp" />
 
@@ -64,7 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Preço: "
+            android:text="@string/preco_ProdutoMercado"
             android:id="@+id/txtPreco"
             android:textSize="30dp" />
 
@@ -87,14 +87,14 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:text="Salvar"
+            android:text="@string/BtSalvar_ProdutoMercado"
             android:id="@+id/btSalvar" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cancelar"
+            android:text="@string/BtCancel_ProdutoMercado"
             android:id="@+id/btCancel"
             android:layout_weight="0.20" />
     </LinearLayout>

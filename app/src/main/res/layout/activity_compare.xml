@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Compare"
+        android:text="@string/Titulo_Compare"
         android:id="@+id/txtCompare"
         android:textSize="20dp" />
 

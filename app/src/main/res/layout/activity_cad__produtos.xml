@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Cadigo de Barras"
+            android:text="@string/Codigo_bar_Prod"
             android:id="@+id/txtCodigo" />
 
         <LinearLayout
@@ -56,7 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Descrição"
+            android:text="@string/Descrição_Prod"
             android:id="@+id/txtDesc" />
 
         <EditText
@@ -76,19 +76,19 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cadastrar"
+            android:text="@string/BtCadastrar_Prod"
             android:id="@+id/btCad" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Alterar"
+            android:text="@string/BtAlterar_Prod"
             android:id="@+id/btAlterar" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Excluir"
+            android:text="@string/BtExcluir_Prod"
             android:id="@+id/btExcluir" />
     </LinearLayout>
 </LinearLayout>
