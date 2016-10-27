@@ -22,5 +22,5 @@
     <string name="preco_ProdutoMercado">Preço: </string>
     <string name="BtSalvar_ProdutoMercado">Salvar </string>
     <string name="BtCancel_ProdutoMercado">Cancelar </string>
-    <string name="BtCarrinho_Compare">Voltar ao Carrinho </string>
+    <string name="BtCarrinho_Compare">Carrinho </string>
 </resources>
