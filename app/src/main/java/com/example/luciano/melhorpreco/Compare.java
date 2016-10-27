@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.example.luciano.melhorpreco.Dao.BancoDados;
@@ -18,6 +19,7 @@ import com.example.luciano.melhorpreco.Negocio.Produto;
 public class Compare extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
     private ListView lstProds;
+    private Button btCar;
 
     private BancoDados bd;
     private SQLiteDatabase con;
@@ -31,7 +33,15 @@ public class Compare extends AppCompatActivity implements AdapterView.OnItemClic
         setContentView(R.layout.activity_compare);
 
         lstProds = (ListView) findViewById(R.id.lstPro_Merc);
+        btCar = (Button) findViewById(R.id.btCarrinho);
 
+        btCar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(Compare.this, MainActivity.class);
+                startActivity(it);
+            }
+        });
         try{
             bd = new BancoDados(this);
             con = bd.getWritableDatabase();

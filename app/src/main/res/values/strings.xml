@@ -6,11 +6,11 @@
     <string name="Opcao_um">Cadastrar Produto</string>
     <string name="Opcao_dois">Selecionar Produtos</string>
     <string name="Opcao_tres">Realizar Pesquisa</string>
-    <string name="Produto">Produto: </string>
-    <string name="Preco">Preço:   R$  </string>
-    <string name="Quantidade">Quantidade: </string>
-    <string name="BtSalvar">Adicionar </string>
-    <string name="BtCancel">Cancelar </string>
+    <string name="produto_Quantidades">Produto: </string>
+    <string name="preco_Quantidades">Total:   R$  </string>
+    <string name="quantidade_Quantidades">Quantidade: </string>
+    <string name="BtSalvar_Quantidades">Adicionar </string>
+    <string name="BtCancel_Quantidades">Cancelar </string>
     <string name="Codigo_bar_Prod">Código de Barras </string>
     <string name="Descrição_Prod">Descrição </string>
     <string name="BtCadastrar_Prod">Cadastrar </string>
@@ -22,4 +22,5 @@
     <string name="preco_ProdutoMercado">Preço: </string>
     <string name="BtSalvar_ProdutoMercado">Salvar </string>
     <string name="BtCancel_ProdutoMercado">Cancelar </string>
+    <string name="BtCarrinho_Compare">Voltar ao Carrinho </string>
 </resources>
