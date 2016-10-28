@@ -9,6 +9,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -18,7 +19,7 @@ import com.example.luciano.melhorpreco.Dao.BancoDados;
 import com.example.luciano.melhorpreco.Dao.DaoCarrinho;
 import com.example.luciano.melhorpreco.Negocio.Item_carrinho;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
     private ImageButton ImgAdd;
     private TextView txtTotal;
@@ -80,4 +81,8 @@ public class MainActivity extends AppCompatActivity{
         return n/100.00;
     }
 
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+    }
 }

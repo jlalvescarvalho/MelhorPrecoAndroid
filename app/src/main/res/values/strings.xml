@@ -24,4 +24,6 @@
     <string name="BtCancel_ProdutoMercado">Cancelar </string>
     <string name="BtCarrinho_Compare">Carrinho </string>
     <string name="Titulo_Carrinho">Item   Produto  Quantidade  Preço  Total </string>
+    <string name="txtv_alterar_excluir_prod">Produto </string>
+    <string name="txtv_alterar_excluir_quant">Quantidade </string>
 </resources>
