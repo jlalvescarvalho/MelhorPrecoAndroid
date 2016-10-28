@@ -56,8 +56,13 @@ public class Item_carrinho implements Serializable{
         this.total = total;
     }
 
+    public int getTotalInteiro() {
+        double n = this.total * 100;
+        return (int)n;
+    }
+
     @Override
     public String toString() {
-        return this.produto.getDescricao()+"  "+this.Quant+"  "+this.preco+"  "+((int)this.total*100)/100.00;
+        return this.produto.getDescricao()+"  "+this.Quant+"  "+this.preco+"  "+ (getTotalInteiro()/100.00);
     }
 }
