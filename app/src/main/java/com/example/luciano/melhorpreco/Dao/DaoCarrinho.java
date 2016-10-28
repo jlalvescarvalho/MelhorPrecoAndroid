@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.widget.ArrayAdapter;
 
-import com.example.luciano.melhorpreco.Negocio.Carrinho;
+import com.example.luciano.melhorpreco.Negocio.Item_carrinho;
 import com.example.luciano.melhorpreco.Negocio.Produto;
 
 import java.util.ArrayList;
@@ -23,34 +23,36 @@ public class DaoCarrinho {
         this.con = con;
     }
 
-    public void inserir(Carrinho carrinho) {
+    public void inserir(Item_carrinho itemcarrinho) {
 
         ContentValues valores = new ContentValues();
 
-        valores.put("Quantidade", carrinho.getQuant());
-        valores.put("id_produto", carrinho.getProduto().get_id());
-        valores.put("Preco", carrinho.getPreco());
+        valores.put("Quantidade", itemcarrinho.getQuant());
+        valores.put("id_produto", itemcarrinho.getProduto().get_id());
+        valores.put("Preco", itemcarrinho.getPreco());
+        valores.put("Total", itemcarrinho.getTotal());
 
-        con.insertOrThrow("Carrinho", null, valores);
+        con.insertOrThrow("Item_carrinho", null, valores);
     }
 
-    public ArrayAdapter<Carrinho> recuperaTodos(Context context) {
+    public ArrayAdapter<Item_carrinho> recuperaTodos(Context context) {
 
-        ArrayAdapter<Carrinho> ProdCarrinho = new ArrayAdapter<Carrinho>(context, android.R.layout.simple_list_item_1);
+        ArrayAdapter<Item_carrinho> ProdCarrinho = new ArrayAdapter<Item_carrinho>(context, android.R.layout.simple_list_item_1);
 
-        Cursor cursor = con.query("Carrinho", null, null, null, null, null, null);
+        Cursor cursor = con.query("Item_carrinho", null, null, null, null, null, null);
 
         if (cursor.getCount() > 0) {
             cursor.moveToFirst();
             do {
 
-                Carrinho carrinho = new Carrinho();
-                carrinho.set_id(cursor.getInt(0));
-                carrinho.setQuant(cursor.getInt(1));
-                carrinho.setProduto(recuperar(cursor.getInt(2)).get(0));
-                carrinho.setPreco(cursor.getDouble(3));
+                Item_carrinho itemcarrinho = new Item_carrinho();
+                itemcarrinho.set_id(cursor.getInt(0));
+                itemcarrinho.setQuant(cursor.getInt(1));
+                itemcarrinho.setProduto(recuperar(cursor.getInt(2)).get(0));
+                itemcarrinho.setPreco(cursor.getDouble(3));
+                itemcarrinho.setTotal(cursor.getDouble(4));
 
-                ProdCarrinho.add(carrinho);
+                ProdCarrinho.add(itemcarrinho);
 
 
             } while (cursor.moveToNext());

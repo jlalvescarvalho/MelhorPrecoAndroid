@@ -3,21 +3,20 @@ package com.example.luciano.melhorpreco;
 import android.content.Intent;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.icu.math.*;
+import android.renderscript.Sampler;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.luciano.melhorpreco.Dao.BancoDados;
 import com.example.luciano.melhorpreco.Dao.DaoCarrinho;
-import com.example.luciano.melhorpreco.Dao.DaoProduto;
-import com.example.luciano.melhorpreco.Negocio.Carrinho;
-import com.example.luciano.melhorpreco.Negocio.Produto_Mercado;
+import com.example.luciano.melhorpreco.Negocio.Item_carrinho;
 
 public class MainActivity extends AppCompatActivity{
 
@@ -29,7 +28,7 @@ public class MainActivity extends AppCompatActivity{
     private SQLiteDatabase con;
     private DaoCarrinho dcar;
 
-    private ArrayAdapter<Carrinho> adpCar;
+    private ArrayAdapter<Item_carrinho> adpCar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,9 +72,12 @@ public class MainActivity extends AppCompatActivity{
     public double PreencherTotal(){
         double total = 0;
         for(int i=0; i < adpCar.getCount(); i++){
-            total += adpCar.getItem(i).getPreco();
+            total += adpCar.getItem(i).getTotal();
         }
-        return total;
+        double d = total*100;
+        int n = (int) d;
+
+        return n/100.00;
     }
 
 }

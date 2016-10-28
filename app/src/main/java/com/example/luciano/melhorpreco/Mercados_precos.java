@@ -66,7 +66,7 @@ public class Mercados_precos extends AppCompatActivity implements AdapterView.On
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         Produto_Mercado produto_mercado = adpPm.getItem(i);
 
-        Intent it = new Intent(this, Quantidades.class);
+        Intent it = new Intent(this, Item.class);
         it.putExtra("PM", produto_mercado);
         startActivity(it);
     }

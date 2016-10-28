@@ -20,6 +20,12 @@
         android:textColor="#37f906"
         android:textStyle="bold" />
 
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Titulo_Carrinho"
+        android:id="@+id/textView4" />
+
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="360dp"

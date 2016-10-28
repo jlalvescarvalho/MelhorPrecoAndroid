@@ -48,11 +48,12 @@ public class ScriptSQL {
 
         StringBuilder stringBuilder = new StringBuilder();
 
-        stringBuilder.append("CREATE TABLE IF NOT EXISTS Carrinho ( ");
+        stringBuilder.append("CREATE TABLE IF NOT EXISTS Item_carrinho ( ");
         stringBuilder.append("_id        INTEGER PRIMARY KEY AUTOINCREMENT, ");
         stringBuilder.append("Quantidade      INTEGER  NOT NULL, ");
         stringBuilder.append("id_produto INTEGER NOT NULL, ");
         stringBuilder.append("Preco DOUBLE NOT NULL, ");
+        stringBuilder.append("Total DOUBLE NOT NULL, ");
         stringBuilder.append("FOREIGN KEY(id_produto) REFERENCES Produto(_id)); ");
         return stringBuilder.toString();
     }

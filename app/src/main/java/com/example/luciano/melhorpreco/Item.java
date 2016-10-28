@@ -13,10 +13,10 @@ import android.widget.TextView;
 
 import com.example.luciano.melhorpreco.Dao.BancoDados;
 import com.example.luciano.melhorpreco.Dao.DaoCarrinho;
-import com.example.luciano.melhorpreco.Negocio.Carrinho;
+import com.example.luciano.melhorpreco.Negocio.Item_carrinho;
 import com.example.luciano.melhorpreco.Negocio.Produto_Mercado;
 
-public class Quantidades extends AppCompatActivity implements View.OnClickListener{
+public class Item extends AppCompatActivity implements View.OnClickListener{
 
     private EditText edtProd;
     private TextView txtTotal;
@@ -34,7 +34,7 @@ public class Quantidades extends AppCompatActivity implements View.OnClickListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quantidades);
+        setContentView(R.layout.activity_item);
 
         edtProd = (EditText) findViewById(R.id.edtProd);
         txtTotal = (TextView)findViewById(R.id.txtTotal);
@@ -68,11 +68,12 @@ public class Quantidades extends AppCompatActivity implements View.OnClickListen
 
     public void inserir(){
         try {
-            Carrinho c = new Carrinho();
+            Item_carrinho c = new Item_carrinho();
 
             c.setQuant(Integer.parseInt(edtQuant.getText().toString()));
             c.setProduto(pm.getProduto());
             c.setPreco(Double.parseDouble(txtTotal.getText().toString()));
+            c.setTotal(Double.parseDouble(txtTotal.getText().toString())*Integer.parseInt(edtQuant.getText().toString()));
 
             dc.inserir(c);
         }catch (SQLException ex){

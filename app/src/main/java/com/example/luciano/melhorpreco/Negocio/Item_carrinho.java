@@ -5,14 +5,15 @@ import java.io.Serializable;
 /**
  * Created by Luciano on 29/08/2016.
  */
-public class Carrinho implements Serializable{
+public class Item_carrinho implements Serializable{
 
     private int _id;
     private int Quant;
     private Produto produto;
     private double preco;
+    private double total;
 
-    public Carrinho() {
+    public Item_carrinho() {
     }
 
     public int get_id() {
@@ -47,8 +48,16 @@ public class Carrinho implements Serializable{
         this.preco = preco;
     }
 
+    public double getTotal() {
+        return total;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
+    }
+
     @Override
     public String toString() {
-        return this.produto.getDescricao()+" Quant. "+this.Quant+" Preço: "+this.preco;
+        return this.produto.getDescricao()+"  "+this.Quant+"  "+this.preco+"  "+((int)this.total*100)/100.00;
     }
 }

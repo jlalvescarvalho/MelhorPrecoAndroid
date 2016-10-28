@@ -7,7 +7,7 @@
     <string name="Opcao_dois">Selecionar Produtos</string>
     <string name="Opcao_tres">Realizar Pesquisa</string>
     <string name="produto_Quantidades">Produto: </string>
-    <string name="preco_Quantidades">Total:   R$  </string>
+    <string name="preco_Quantidades">Total:   R$   </string>
     <string name="quantidade_Quantidades">Quantidade: </string>
     <string name="BtSalvar_Quantidades">Adicionar </string>
     <string name="BtCancel_Quantidades">Cancelar </string>
@@ -23,4 +23,5 @@
     <string name="BtSalvar_ProdutoMercado">Salvar </string>
     <string name="BtCancel_ProdutoMercado">Cancelar </string>
     <string name="BtCarrinho_Compare">Carrinho </string>
+    <string name="Titulo_Carrinho">Item   Produto  Quantidade  Preço  Total </string>
 </resources>

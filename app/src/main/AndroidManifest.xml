@@ -21,7 +21,7 @@
         <activity android:name=".Compare" />
         <activity android:name=".Mercados_precos" />
         <activity android:name=".Opcoes" />
-        <activity android:name=".Quantidades"></activity>
+        <activity android:name=".Item"></activity>
     </application>
 
 </manifest>
