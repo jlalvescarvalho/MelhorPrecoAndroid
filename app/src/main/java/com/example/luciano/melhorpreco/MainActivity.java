@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
             adpCar = dcar.recuperaTodos(this);
             lstCarrinho.setAdapter(adpCar);
+            lstCarrinho.setOnItemClickListener(this);
 
             txtTotal.setText("R$ "+String.valueOf(PreencherTotal()));
 
@@ -83,6 +84,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        Item_carrinho item_carrinho = adpCar.getItem(i);
 
+        Intent it = new Intent(this, Alterar_Excluir_Carrinho.class);
+        it.putExtra("item", item_carrinho);
+        startActivity(it);
     }
 }

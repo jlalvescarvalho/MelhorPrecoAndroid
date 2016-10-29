@@ -25,5 +25,10 @@
     <string name="BtCarrinho_Compare">Carrinho </string>
     <string name="Titulo_Carrinho">Item   Produto  Quantidade  Preço  Total </string>
     <string name="txtv_alterar_excluir_prod">Produto </string>
-    <string name="txtv_alterar_excluir_quant">Quantidade </string>
+    <string name="txtv_alterar_excluir_quant">Quantidade:  </string>
+    <string name="precoUnitario_Altera_Excluir">Preço Unitário:  </string>
+    <string name="total_Alterar_Excuir">Total:  </string>
+    <string name="BtSalvar_Alterar_Excluir">Salvar</string>
+    <string name="BtExcluir_Alterar_Excluir">Excluir</string>
+
 </resources>

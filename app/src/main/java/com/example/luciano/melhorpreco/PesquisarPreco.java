@@ -79,7 +79,7 @@ public class PesquisarPreco extends AppCompatActivity implements View.OnClickLis
             AlertDialog.Builder msg = new AlertDialog.Builder(this);
             msg.setTitle("Mercado à ser pesquisado");
             final EditText input = new EditText(this);
-            input.setInputType(InputType.TYPE_CLASS_TEXT);
+            input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_CAP_CHARACTERS);
             msg.setView(input);
             msg.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 @Override

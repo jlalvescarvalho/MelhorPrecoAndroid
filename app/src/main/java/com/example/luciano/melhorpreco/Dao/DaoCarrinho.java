@@ -35,6 +35,20 @@ public class DaoCarrinho {
         con.insertOrThrow("Item_carrinho", null, valores);
     }
 
+    public void Excluir(Item_carrinho item_carrinho){
+        con.delete("Item_carrinho", "_id = ?", new String[]{String.valueOf(item_carrinho.get_id())});
+    }
+
+    public void Alterar(Item_carrinho item_carrinho){
+        ContentValues valores = new ContentValues();
+
+        valores.put("Quantidade", item_carrinho.getQuant());
+        valores.put("Preco", item_carrinho.getPreco());
+        valores.put("Total", item_carrinho.getTotal());
+
+        con.update("Item_carrinho", valores, "_id = ?", new String[]{ String.valueOf(item_carrinho.get_id())});
+    }
+
     public ArrayAdapter<Item_carrinho> recuperaTodos(Context context) {
 
         ArrayAdapter<Item_carrinho> ProdCarrinho = new ArrayAdapter<Item_carrinho>(context, android.R.layout.simple_list_item_1);
